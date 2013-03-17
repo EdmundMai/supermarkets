@@ -1,0 +1,6 @@
+%li{:id => "supermarket_#{supermarket.id}", :class => "sm_lis"}
+	= link_to supermarket.name, supermarket_path(supermarket), :remote => true, :class => "supermarket_show_buttons"
+	= link_to "Delete", supermarket_path(supermarket), :method => :delete, :remote => true, :confirm => "Are you sure?", :class => "button tiny alert radius"
+	= link_to "Edit", edit_supermarket_path(supermarket), :remote => true, :class => "button tiny success radius"
+	%div= link_to((supermarket.location ? supermarket.location.name : "None"), google_map_supermarket_path(supermarket))
+	%div{:id => "mkt_product_#{supermarket.id}"}

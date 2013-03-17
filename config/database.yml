@@ -1,0 +1,26 @@
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: aiden_development
+  pool: 5
+  host: localhost
+  username: edmundmai
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: aiden_test
+  pool: 5
+  host: localhost
+  username: edmundmai
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: aiden_production
+  pool: 5
+  username: edmundmai
+  password:

@@ -1,0 +1,2 @@
+$('#mkt_product_<%= @supermarket.id %>').empty();
+$('#mkt_product_<%= @supermarket.id %>').append("<%=j render :partial => 'products', :locals => {:supermarket => @supermarket} %>");

@@ -1,0 +1,9 @@
+%nav.row
+	.large-5.columns
+		= link_to 'New Supermarket', new_supermarket_path, :remote => true, :class => 'button tiny radius'
+		= link_to 'Search Supermarket by Location', search_supermarkets_path, :remote => true, :class => 'button tiny radius', :id => 'search_link'
+	.large-3.columns
+		= form_tag '/supermarkets/search', :method => :get, :remote => true, :id => 'search_form' do
+			= text_field_tag 'search'
+			= submit_tag 'Search'
+	.large-4.columns

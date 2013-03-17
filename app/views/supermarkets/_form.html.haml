@@ -1,0 +1,11 @@
+= form_for @supermarket, :remote => true do |f|
+	= f.label :name
+	= f.text_field :name, :autofocus => true
+	= f.label :location
+	= f.select :location_id, Location.all.collect { |l| [l.name, l.id] }, :include_blank => true
+	- @products.each do |product|
+		= check_box_tag 'supermarket[product_ids][]', product.id, @supermarket.products.include?(product)
+		= product.name
+		%br
+
+	= f.submit

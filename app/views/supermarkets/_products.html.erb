@@ -1,0 +1,3 @@
+<% supermarket.products.each do |p| %>
+<span><%= p.name %><%= ',' unless p == supermarket.products.last %></span>
+<% end %>

@@ -1,0 +1,4 @@
+$('.flasherrors').empty();
+<% @supermarket.errors.full_messages.each do |e| %>
+$('.flasherrors').append("<%=j e %> <br />");
+<% end %>
